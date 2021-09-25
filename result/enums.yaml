@@ -203,6 +203,7 @@ WeaponType:
   - MG: 15
   - Binah: 16
   - MT: 17
+  - Relic: 18
 
 EntityMaterialType:
   - Wood: 0
@@ -267,6 +268,12 @@ ExternalBehavior:
   - ClearNormalSkill: 5
   - MoveLeft: 6
   - MoveRight: 7
+  - AllUseSelectExSkill: 8
+  - ConnectCharacterToDummy: 9
+  - ConnectExSkillToParts: 10
+  - SetMaxHPToParts: 11
+  - AlivePartsUseExSkill: 12
+  - ActivatePart: 13
 
 TacticEntityType:
   - None: 0
@@ -630,6 +637,8 @@ EventContentType:
   - Gacha: 1
   - Mission: 2
   - Shop: 3
+  - Raid: 4
+  - Arena: 5
 
 OpenCondition:
   - Hide: 0
@@ -697,6 +706,7 @@ OpenConditionContent:
   - Schedule: 35
   - Story: 36
   - Tactic_Speed: 37
+  - Cafe_Invite: 38
 
 ContentLockType:
   - None: 0
@@ -1180,6 +1190,34 @@ ParcelChangeReason:
   - CumulativeTimeReward_Reward: 63
   - Mail_Receive: 64
   - MomoTalk_FavorSchedule: 65
+  - WeekDungeon_EnterBlood: 66
+  - WeekDungeon_EnterGift: 67
+  - Acquire_ActionPoint: 68
+  - Acquire_ArenaTicket: 69
+  - EventContent_TotalReward: 70
+  - Craft_UpdateNode: 71
+  - Craft_CompleteProcess: 72
+  - Craft_Reward: 73
+  - EventContent_BattleResult: 74
+  - Adventure_Sweep: 75
+  - EventContent_Sweep: 76
+  - WeekDungeon_Sweep: 77
+  - Acquire_MonthlyProduct: 78
+  - Acquire_DailyReward: 79
+  - Billing_PurchaseProduct: 80
+  - EventContent_EnterMainStage: 81
+  - EventContent_EnterSubStage: 82
+  - EventContent_MainStageResult: 83
+  - EventContent_SubStageResult: 84
+  - EventContent_Retreat: 85
+  - WeekDungeon_BloodResult: 86
+  - WeekDungeon_GiftResult: 87
+  - WeekDungeon_EnterChaserA: 88
+  - WeekDungeon_EnterChaserB: 89
+  - WeekDungeon_EnterChaserC: 90
+  - WeekDungeon_ChaserAResult: 91
+  - WeekDungeon_ChaserBResult: 92
+  - WeekDungeon_ChaserCResult: 93
 
 ScenarioBGType:
   - None: 0
@@ -1667,14 +1705,14 @@ Tag:
   - F_Kotori: 137
   - F_Suzumi: 138
   - F_Pina: 139
-  - TagName0001: 140
+  - F_Aris: 140
   - TagName0002: 141
   - TagName0003: 142
   - TagName0004: 143
   - TagName0005: 144
   - TagName0006: 145
-  - TagName0007: 146
-  - TagName0008: 147
+  - F_Midori: 146
+  - F_Momoi: 147
   - F_Hibiki: 148
   - F_Karin: 149
   - F_Saya: 150
@@ -1694,40 +1732,40 @@ Tag:
   - TagName0009: 164
   - F_Shizuko: 165
   - F_Izuna: 166
-  - F_Mimori: 167
-  - TagName0167: 168
-  - TagName0168: 169
-  - TagName0169: 170
-  - TagName0170: 171
-  - TagName0171: 172
-  - TagName0172: 173
-  - TagName0173: 174
-  - TagName0174: 175
-  - TagName0175: 176
-  - TagName0176: 177
-  - TagName0177: 178
-  - TagName0178: 179
-  - TagName0179: 180
-  - TagName0180: 181
-  - TagName0181: 182
-  - TagName0182: 183
-  - TagName0183: 184
-  - TagName0184: 185
-  - TagName0185: 186
-  - TagName0186: 187
-  - TagName0187: 188
-  - TagName0188: 189
-  - TagName0189: 190
-  - TagName0190: 191
-  - TagName0191: 192
-  - TagName0192: 193
-  - TagName0193: 194
-  - TagName0194: 195
-  - TagName0195: 196
-  - TagName0196: 197
-  - TagName0197: 198
-  - TagName0198: 199
-  - TagName0199: 200
+  - Shield: 167
+  - Helmet: 168
+  - RedHelmet: 169
+  - Helicopter: 170
+  - RangeAttack: 171
+  - MeleeAttack: 172
+  - Sweeper: 173
+  - Blackmarket: 174
+  - Yoheki: 175
+  - Kaiserpmc: 176
+  - Crusader: 177
+  - Goliath: 178
+  - Drone: 179
+  - Droid: 180
+  - ChampionHeavyArmor: 181
+  - Sukeban: 182
+  - Arius: 183
+  - EnemyKotori: 184
+  - EnemyYuuka: 185
+  - KaiserpmcHeavyArmor: 186
+  - BlackmarketHeavyArmor: 187
+  - YohekiHeavyArmor: 188
+  - SweeperBlack: 189
+  - SweeperYellow: 190
+  - GasMaskLightArmor: 191
+  - GehennaFuuki: 192
+  - ChampionAutomata: 193
+  - YohekiAutomata: 194
+  - Automata: 195
+  - EnemyIori: 196
+  - EnemyAkari: 197
+  - NewAutomata: 198
+  - NewAutomataBlack: 199
+  - NewAutomataYellow: 200
   - TagName0200: 201
   - TagName0201: 202
   - TagName0202: 203
