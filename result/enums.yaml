@@ -1,10 +1,3 @@
-AcademyOperationTypes:
-  - BreakTime: 0
-  - Lesson: 1
-  - AfterSchool: 2
-  - RestA: 3
-  - RestB: 4
-
 BubbleType:
   - Idle: 0
   - Monologue: 1
@@ -44,11 +37,6 @@ FurnitureLocation:
   - WallLeft: 3
   - WallRight: 4
 
-OperationType:
-  - BreakTime: 0
-  - OpenReady: 1
-  - Open: 2
-
 AcademyMessageConditions:
   - None: 0
   - FavorRankUp: 1
@@ -60,6 +48,13 @@ AcademyMessageTypes:
   - None: 0
   - Text: 1
   - Image: 2
+
+CafeCharacterState:
+  - None: 0
+  - Idle: 1
+  - Walk: 2
+  - Reaction: 3
+  - Max: 4
 
 VoiceEvent:
   - OnTSA: 0
@@ -592,6 +587,7 @@ TacticRole:
   - Tanker: 1
   - Supporter: 2
   - Healer: 3
+  - Vehicle: 4
 
 TacticRange:
   - Back: 0
@@ -644,6 +640,7 @@ EventContentType:
   - BoxGacha: 6
   - Collection: 7
   - Recollection: 8
+  - MiniGameRhythm: 9
 
 OpenCondition:
   - Hide: 0
@@ -810,18 +807,6 @@ ShortcutContentType:
   - Raid: 6
   - Shop: 7
 
-RowCount:
-  - Three: 3
-  - Four: 4
-  - Six: 6
-  - Eight: 8
-
-ColumnCount:
-  - DummyOne: 0
-  - DummyTwo: 1
-  - DummyThree: 2
-  - DummyFour: 3
-
 EquipmentCategory:
   - Unable: 0
   - Exp: 1
@@ -870,7 +855,15 @@ EquipmentOptionType:
   - OppressionPower_Coefficient: 31
   - OppressionResist_Base: 32
   - OppressionResist_Coefficient: 33
-  - Max: 34
+  - StabilityPoint_Base: 34
+  - StabilityPoint_Coefficient: 35
+  - AccuracyPoint_Base: 36
+  - AccuracyPoint_Coefficient: 37
+  - DodgePoint_Base: 38
+  - DodgePoint_Coefficient: 39
+  - MoveSpeed_Base: 40
+  - MoveSpeed_Coefficient: 41
+  - Max: 42
 
 MultipleConditionCheckType:
   - And: 0
@@ -945,6 +938,11 @@ RaidStatus:
   - Clear: 2
   - Close: 3
 
+WebAPIErrorLevel:
+  - None: 0
+  - Warning: 1
+  - Error: 2
+
 ItemCategory:
   - Coin: 0
   - CharacterExpGrowth: 1
@@ -984,12 +982,15 @@ AttendanceResetType:
   - Server: 1
 
 MissionCategory:
-  - Event: 0
+  - Challenge: 0
   - Daily: 1
   - Weekly: 2
   - Achievement: 3
   - GuideMission: 4
   - All: 5
+  - MiniGameScore: 6
+  - MiniGameEvent: 7
+  - EventAchievement: 8
 
 MissionResetType:
   - None: 0
@@ -1086,10 +1087,27 @@ MissionCompleteConditionType:
   - ClearWeekDungeonTimeLimitFromSecond: 86
   - CompleteScheduleWithTagCount: 87
   - ClearChaserDungeonTimeLimitFromSecond: 88
+  - MIniGameTotalScore: 89
+  - MIniGameHighScore: 90
+  - MIniGameSpecificStageComboCount: 91
+  - MIniGameSpecificStageFullCombo: 92
+  - MIniGameSpecificStageFeverCount: 93
 
 AccountAchievementType:
   - TotalLoginCount: 0
   - TotalGetClearStarCount: 1
+  - TotalCharacterLevelUpCount: 2
+  - TotalCharacterSkillLevelUpCount: 3
+  - TotalClearCampaignStageCount: 4
+  - TotalClearChaserDungeonCount: 5
+  - TotalClearWeekDungeonCount: 6
+  - TotalEquipmentLevelUpCount: 7
+  - TotalEquipmentTierUpCount: 8
+  - MaxComfortPoint: 9
+  - TotalGetGold: 10
+  - TotalUseGold: 11
+  - TotalJoinArenaCount: 12
+  - TotalJoinRaidCount: 13
 
 ParcelType:
   - None: 0
@@ -1265,6 +1283,7 @@ ParcelChangeReason:
   - WeekDungeon_ChaserBResult: 92
   - WeekDungeon_ChaserCResult: 93
   - EventContent_BoxGacha: 94
+  - Raid_Sweep: 95
 
 ScenarioBGType:
   - None: 0
@@ -1357,22 +1376,9 @@ DialogCondition:
   - BoxGachaPrize: 6
 
 DialogConditionDetail:
-  - Day0: 0
-  - Day1: 1
-  - Day2: 2
-  - Day3: 3
-  - Day4: 4
-  - Day5: 5
-  - Day6: 6
-  - Day7: 7
-  - Day8: 8
-  - Day9: 9
-  - Day10: 10
-  - Day11: 11
-  - Day12: 12
-  - Day13: 13
-  - Close: 14
-  - None: 19
+  - None: 0
+  - Day: 1
+  - Close: 2
 
 DialogType:
   - Talk: 0
@@ -1491,6 +1497,8 @@ ShopCategoryType:
   - EventContent_2: 15
   - EventContent_3: 16
   - EventContent_4: 17
+  - ThreeStarGacha: 18
+  - LimitedGacha: 19
 
 PurchaseServerTag:
   - Audit: 0
@@ -1888,17 +1896,17 @@ Tag:
   - Transport: 246
   - Itcenter: 247
   - Powerplant: 248
-  - TagName0247: 249
-  - TagName0248: 250
-  - TagName0249: 251
-  - TagName0250: 252
-  - TagName0251: 253
-  - TagName0252: 254
-  - TagName0253: 255
-  - TagName0254: 256
-  - TagName0255: 257
-  - TagName0256: 258
-  - TagName0257: 259
+  - SukebanSwim_SMG: 249
+  - SukebanSwim_MG: 250
+  - SukebanSwim_SR: 251
+  - SukebanSwim_Champion: 252
+  - Token_S6: 253
+  - Swimsuit: 254
+  - WaterPlay: 255
+  - F_Hihumi_Swimsuit: 256
+  - F_Azusa_Swimsuit: 257
+  - F_Tsurugi_Swimsuit: 258
+  - F_Mashiro_Swimsuit: 259
   - TagName0258: 260
   - TagName0259: 261
   - TagName0260: 262
