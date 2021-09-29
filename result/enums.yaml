@@ -54,10 +54,8 @@ CafeCharacterState:
   - Idle: 1
   - Walk: 2
   - Reaction: 3
-  - Speedrace: 4
-  - Hockey1: 5
-  - Hockey2: 6
-  - Max: 7
+  - Interaction: 4
+  - Max: 5
 
 VoiceEvent:
   - OnTSA: 0
@@ -655,6 +653,7 @@ EventContentType:
   - Recollection: 8
   - MiniGameRhythm: 9
   - CardShop: 10
+  - EventLocation: 11
 
 OpenCondition:
   - Hide: 0
@@ -783,6 +782,7 @@ EventTargetType:
   - Campaign_Normal: 2
   - Campaign_Hard: 3
   - SchoolDungeon: 4
+  - AcademySchedule: 5
 
 ContentResultType:
   - Failure: 0
@@ -814,6 +814,7 @@ EventCollectionUnlockType:
   - ClearSpecificEventScenario: 2
   - ClearSpecificEventMission: 3
   - PurchaseSpecificItemCount: 4
+  - SpecificEventLocationRank: 5
 
 ShortcutContentType:
   - None: 0
@@ -835,6 +836,17 @@ SchoolDungeonType:
   - SchoolA: 0
   - SchoolB: 1
   - SchoolC: 2
+
+EventContentBuffFindRule:
+  - None: 0
+  - WeaponType: 1
+  - SquadType: 2
+  - StreetBattleAdaptation: 3
+  - OutdoorBattleAdaptation: 4
+  - IndoorBattleAdaptation: 5
+  - BulletType: 6
+  - School: 7
+  - TacticRange: 8
 
 EquipmentCategory:
   - Unable: 0
@@ -1133,6 +1145,9 @@ MissionCompleteConditionType:
   - GetFullComboRhythm: 94
   - GetFeverCountRhythm: 95
   - UseActionPoint: 96
+  - ClearSchoolDungeonCount: 97
+  - ClearSchoolDungeonTimeLimitFromSecond: 98
+  - ClearSpecificSchoolDungeonCount: 99
 
 AccountAchievementType:
   - TotalLoginCount: 0
@@ -1149,6 +1164,7 @@ AccountAchievementType:
   - TotalUseGold: 11
   - TotalJoinArenaCount: 12
   - TotalJoinRaidCount: 13
+  - TotalClearSchoolDungeonCount: 14
 
 ParcelType:
   - None: 0
@@ -1419,6 +1435,8 @@ DialogCategory:
   - UIAttendanceEvent03: 30
   - UIEventCardShop: 31
   - UISchoolDungeon: 32
+  - UIAttendanceEvent: 33
+  - UISpecialOperationLobby: 34
 
 DialogCondition:
   - Idle: 0
@@ -1559,6 +1577,7 @@ ShopCategoryType:
   - ThreeStarGacha: 18
   - LimitedGacha: 19
   - MasterCoin: 20
+  - SecretStoneGrowth: 21
 
 PurchaseServerTag:
   - Audit: 0
@@ -1613,6 +1632,11 @@ BillingTransactionEndType:
   - None: 0
   - Success: 1
   - Cancel: 2
+
+GachaRewardType:
+  - None: 0
+  - Eligma: 1
+  - Eleph: 2
 
 SocialMode:
   - TITLE: 0
@@ -1979,9 +2003,9 @@ Tag:
   - F_Shun_Kid: 269
   - F_Kirino_default: 270
   - F_Saya_Casual: 271
-  - TagName0270: 272
-  - TagName0271: 273
-  - TagName0272: 274
+  - F_Neru_BunnyGirl: 272
+  - F_Karin_BunnyGirl: 273
+  - F_Asuna_BunnyGirl: 274
   - TagName0273: 275
   - TagName0274: 276
   - TagName0275: 277
