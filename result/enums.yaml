@@ -531,6 +531,10 @@ StatLevelUpType:
   - Standard: 0
   - Premature: 1
   - LateBloom: 2
+  - Obstacle: 3
+  - Weapon_U: 4
+  - Weapon_S: 5
+  - Weapon_D: 6
 
 GrowthCategory:
   - None: 0
@@ -654,6 +658,7 @@ EventContentType:
   - MiniGameRhythm: 9
   - CardShop: 10
   - EventLocation: 11
+  - MinigameRhythmEvent: 12
 
 OpenCondition:
   - Hide: 0
@@ -1148,6 +1153,7 @@ MissionCompleteConditionType:
   - ClearSchoolDungeonCount: 97
   - ClearSchoolDungeonTimeLimitFromSecond: 98
   - ClearSpecificSchoolDungeonCount: 99
+  - GetCriticalCountRhythm: 100
 
 AccountAchievementType:
   - TotalLoginCount: 0
@@ -1243,6 +1249,7 @@ RecipeType:
   - EquipmentTierUp: 4
   - CafeRankUp: 5
   - SelectionItem: 6
+  - WeaponTranscendence: 7
 
 GachaGroupType:
   - None: 0
@@ -1351,6 +1358,12 @@ ParcelChangeReason:
   - CharacterWeapon_ExpGrowth: 98
   - CharacterWeapon_Transcendence: 99
   - MiniGameMission_Clear: 100
+  - SchoolDungeon_EnterSchoolA: 101
+  - SchoolDungeon_EnterSchoolB: 102
+  - SchoolDungeon_EnterSchoolC: 103
+  - SchoolDungeon_SchoolAResult: 104
+  - SchoolDungeon_SchoolBResult: 105
+  - SchoolDungeon_SchoolCResult: 106
 
 ScenarioBGType:
   - None: 0
@@ -1437,6 +1450,7 @@ DialogCategory:
   - UISchoolDungeon: 32
   - UIAttendanceEvent: 33
   - UISpecialOperationLobby: 34
+  - WeaponGet: 35
 
 DialogCondition:
   - Idle: 0
@@ -1450,6 +1464,7 @@ DialogCondition:
   - Prize1: 8
   - Prize2: 9
   - Prize3: 10
+  - Interaction: 11
 
 DialogConditionDetail:
   - None: 0
@@ -1479,6 +1494,8 @@ School:
   - Valkyrie: 9
   - WildHunt: 10
   - SRT: 11
+  - SCHALE: 12
+  - ETC: 13
 
 StoryCondition:
   - Open: 0
@@ -2006,12 +2023,12 @@ Tag:
   - F_Neru_BunnyGirl: 272
   - F_Karin_BunnyGirl: 273
   - F_Asuna_BunnyGirl: 274
-  - TagName0273: 275
-  - TagName0274: 276
-  - TagName0275: 277
-  - TagName0276: 278
-  - TagName0277: 279
-  - TagName0278: 280
+  - DecagrammatonSPO: 275
+  - Justice: 276
+  - F_Natsu: 277
+  - F_Miku: 278
+  - F_Ako: 279
+  - F_Mari: 280
   - TagName0279: 281
   - TagName0280: 282
   - TagName0281: 283
@@ -4772,6 +4789,7 @@ Club:
   - Endanbou: 33
   - NinpoKenkyubu: 34
   - Class227: 35
+  - EmptyClub: 36
 
 GroundNodeType:
   - None: 0
